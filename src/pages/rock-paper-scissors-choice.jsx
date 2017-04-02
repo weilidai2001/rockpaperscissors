@@ -1,34 +1,23 @@
 import React, { PureComponent } from 'react';
-import { connect } from 'react-redux';
+import Choice from './choice';
 import { GameChoice } from '../constants/game-choices';
 
 class RockPaperScissorsChoice extends PureComponent {
     constructor(props, context) {
         super(props, context);
-        this.makeChoice = this.makeChoice.bind(this)
-    }
-
-    makeChoice(choiceType) {
-        this.props.onChoiceClick(choiceType);
-        this.props.history.push('/game-result');
     }
 
     render() {
+        const choices = [
+            {id: GameChoice.CHOICE_ROCK, displayAs: 'Rock'},
+            {id: GameChoice.CHOICE_PAPER, displayAs: 'Paper'},
+            {id: GameChoice.CHOICE_SCISSORS, displayAs: 'Scissors'}
+        ];
 
         return (
-            <div className="choice">
-                <div className="choice__button" onClick={() => this.makeChoice(GameChoice.CHOICE_ROCK)}>Rock</div>
-                <div className="choice__button" onClick={() => this.makeChoice(GameChoice.CHOICE_PAPER)}>Paper</div>
-                <div className="choice__button" onClick={() => this.makeChoice(GameChoice.CHOICE_SCISSORS)}>Scissors</div>
-            </div>
+            <Choice choices={choices} history={this.props.history} />
         );
     }
 }
 
-function mapDispatchToProps(dispatch) {
-    return {
-        onChoiceClick: (type) => dispatch({type})
-    };
-}
-
-export default connect(null, mapDispatchToProps)(RockPaperScissorsChoice);
+export default RockPaperScissorsChoice;

@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import cx from 'classnames';
-import { GameChoice } from '../constants/game-choices';
 import { WinningStates } from '../constants/winning-states';
 import { calculateWinner, getRandomChoice } from '../game-logic';
 
