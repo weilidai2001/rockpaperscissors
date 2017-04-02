@@ -30,5 +30,12 @@ export function calculateWinner(player1Choice, player2Choice) {
 }
 
 export function getRandomChoice(){
-    return GameChoice.CHOICE_PAPER.slug;
+    const randomNumberBetweenZeroAndOne = Math.random();
+    if (randomNumberBetweenZeroAndOne <= 0.3333){
+        return GameChoice.CHOICE_ROCK.slug;
+    } else if (randomNumberBetweenZeroAndOne > 0.3333 && randomNumberBetweenZeroAndOne <= 0.6666) {
+        return GameChoice.CHOICE_PAPER.slug;
+    } else {
+        return GameChoice.CHOICE_SCISSORS.slug;
+    }
 }
