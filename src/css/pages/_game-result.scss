@@ -3,6 +3,62 @@
   margin: 50px auto;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+}
+
+.game-result__player {
+  width: 40%;
+}
+
+.game-result__player-heading {
+  text-align: center;
+}
+
+.game-result__vs {
+  width: 20%;
+  text-align: center;
+  font-size: 50px;
+  font-style: italic;
+}
+
+.game-result__player-choice {
+  width: 70px;
+  height: 70px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 20px auto;
+
+  &.CHOICE_ROCK {
+    background-image: url("../img/rock.png");
+  }
+
+  &.CHOICE_PAPER {
+    background-image: url("../img/paper.png");
+  }
+
+  &.CHOICE_SCISSORS {
+    background-image: url("../img/scissors.png");
+  }
+}
+
+.game-result__player-winner {
+  width: 70px;
+  height: 70px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 20px auto;
+
+  &.winner {
+    background-image: url("../img/winner.png");
+  }
+
+  &.draw {
+    background-image: url("../img/drawer.png");
+  }
+
+  &.loser {
+    background-image: url("../img/loser.png");
+  }
 }
 
 .game-result__button {

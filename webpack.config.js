@@ -64,6 +64,11 @@ module.exports = {
 			test: /\.jsx$/,
 			exclude: [/node_modules/],
 			use: 'babel-loader'
+		},{
+            test: /\.(png|jpe?g)$/,
+			use: {
+            	loader: 'file-loader'
+            }
 		}]
 	}
 };

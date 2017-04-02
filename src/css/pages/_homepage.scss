@@ -5,6 +5,12 @@
     flex-wrap: wrap;
 }
 
+.homepage__heading {
+    font-size: 30px;
+    line-height: 50px;
+    margin-bottom: 50px;
+}
+
 .homepage__button {
   @extend .button;
 
