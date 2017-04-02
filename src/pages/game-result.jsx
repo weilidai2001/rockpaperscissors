@@ -16,7 +16,7 @@ class GameResult extends PureComponent {
             <div className="game-result">
                 <div className="game-result__player">
                     <div className="game-result__player-heading">You</div>
-                    <div className={cx('game-result__player-choice', player1Choice)}></div>
+                    <div className={cx('game-result__player-choice', 'game-result__player-choice--player1', player1Choice)}></div>
                     <div className={cx(
                         'game-result__player-winner',
                         {'winner': winner.cssClassName === WinningStates.PLAYER1.cssClassName},
@@ -27,7 +27,7 @@ class GameResult extends PureComponent {
                 <div className="game-result__vs">vs</div>
                 <div className="game-result__player">
                     <div className="game-result__player-heading">Your opponent</div>
-                    <div className={cx('game-result__player-choice', player2Choice)}></div>
+                    <div className={cx('game-result__player-choice', 'game-result__player-choice--player2', player2Choice)}></div>
                     <div className={cx(
                         'game-result__player-winner',
                         {'winner': winner.cssClassName === WinningStates.PLAYER2.cssClassName},

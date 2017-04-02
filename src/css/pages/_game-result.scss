@@ -22,29 +22,41 @@
 }
 
 .game-result__player-choice {
-  width: 70px;
-  height: 70px;
-  background-size: cover;
+  width: 80px;
+  height: 80px;
+  background-size: contain;
   background-repeat: no-repeat;
   margin: 20px auto;
 
-  &.CHOICE_ROCK {
-    background-image: url("../img/rock.png");
+  &--player1.CHOICE_ROCK {
+    background-image: url("../img/rock-player1.png");
   }
 
-  &.CHOICE_PAPER {
-    background-image: url("../img/paper.png");
+  &--player1.CHOICE_PAPER {
+    background-image: url("../img/paper-player1.png");
   }
 
-  &.CHOICE_SCISSORS {
-    background-image: url("../img/scissors.png");
+  &--player1.CHOICE_SCISSORS {
+    background-image: url("../img/scissors-player1.png");
+  }
+
+  &--player2.CHOICE_ROCK {
+    background-image: url("../img/rock-player2.png");
+  }
+
+  &--player2.CHOICE_PAPER {
+    background-image: url("../img/paper-player2.png");
+  }
+
+  &--player2.CHOICE_SCISSORS {
+    background-image: url("../img/scissors-player2.png");
   }
 }
 
 .game-result__player-winner {
-  width: 70px;
-  height: 70px;
-  background-size: cover;
+  width: 100px;
+  height: 100px;
+  background-size: contain;
   background-repeat: no-repeat;
   margin: 20px auto;
 
