@@ -1,0 +1,12 @@
+.choice {
+  width: 320px;
+  margin: 50px auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.choice__button {
+  @extend .button;
+
+  margin-bottom: 20px;
+}

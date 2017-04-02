@@ -1,7 +1,6 @@
-body {
-	background-color: green;
-
-	h1 {
-		color: white;
-	}
-}
+@import "lib/reset";
+@import "global";
+@import "components/button";
+@import "pages/homepage";
+@import "pages/rock-paper-scissors-choice";
+@import "pages/game-result";

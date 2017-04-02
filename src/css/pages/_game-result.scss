@@ -1,0 +1,12 @@
+.game-result {
+  width: 320px;
+  margin: 50px auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.game-result__button {
+  @extend .button;
+
+  margin-bottom: 20px;
+}

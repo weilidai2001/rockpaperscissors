@@ -16,10 +16,10 @@ class RockPaperScissorsChoice extends PureComponent {
     render() {
 
         return (
-            <div>
-                <button onClick={() => this.makeChoice(GameChoice.CHOICE_ROCK.slug)}>{GameChoice.CHOICE_ROCK.displayAs}</button>
-                <button onClick={() => this.makeChoice(GameChoice.CHOICE_PAPER.slug)}>{GameChoice.CHOICE_PAPER.displayAs}</button>
-                <button onClick={() => this.makeChoice(GameChoice.CHOICE_SCISSORS.slug)}>{GameChoice.CHOICE_SCISSORS.displayAs}</button>
+            <div className="choice">
+                <div className="choice__button" onClick={() => this.makeChoice(GameChoice.CHOICE_ROCK.slug)}>{GameChoice.CHOICE_ROCK.displayAs}</div>
+                <div className="choice__button" onClick={() => this.makeChoice(GameChoice.CHOICE_PAPER.slug)}>{GameChoice.CHOICE_PAPER.displayAs}</div>
+                <div className="choice__button" onClick={() => this.makeChoice(GameChoice.CHOICE_SCISSORS.slug)}>{GameChoice.CHOICE_SCISSORS.displayAs}</div>
             </div>
         );
     }

@@ -14,10 +14,10 @@ class GameResult extends PureComponent {
         const winner = calculateWinner(player1ChoiceSlug, opponentChoiceSlug);
 
         return (
-            <div>
+            <div className="game-result">
                 <div>You (Player 1) chose { player1AsNaturalText } and your opponent (Player 2) chose {GameChoice[opponentChoiceSlug].displayAs}</div>
                 <div>{ winner.message }</div>
-                <Link to="/">Play again</Link>
+                <div className="game-result__button" onClick={() => this.props.history.push('/')}>Play again</div>
             </div>
         );
     }

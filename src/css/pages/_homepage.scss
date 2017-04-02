@@ -1,0 +1,12 @@
+.homepage {
+    width: 320px;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.homepage__button {
+  @extend .button;
+
+  margin-bottom: 20px;
+}

@@ -1,14 +1,13 @@
 import React, { PureComponent } from 'react';
-import { Link } from 'react-router-dom';
 
 class Homepage extends PureComponent {
 
 	render() {
 
 		return (
-			<div>
-				<Link to="/rock-paper-scissors-choice">Human vs Computer</Link>
-				<Link to="/game-result">Computer vs Computer</Link>
+			<div className="homepage">
+				<div className="homepage__button" onClick={() => this.props.history.push('/rock-paper-scissors-choice')}>Human vs Computer</div>
+				<div className="homepage__button">Computer vs Computer</div>
 			</div>
 		);
 	}
