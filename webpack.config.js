@@ -66,9 +66,7 @@ module.exports = {
 			use: 'babel-loader'
 		},{
             test: /\.(png|jpe?g)$/,
-			use: {
-            	loader: 'file-loader'
-            }
+			use: ['file-loader']
 		}]
 	}
 };
