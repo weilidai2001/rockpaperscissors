@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import { Link } from 'react-router-dom';
 
 class RockPaperScissorsChoice extends PureComponent {
 
@@ -6,9 +7,9 @@ class RockPaperScissorsChoice extends PureComponent {
 
         return (
             <div>
-                <button>Rock</button>
-                <button>Paper</button>
-                <button>Scissors</button>
+                <Link to="/game-result">Rock</Link>
+                <Link to="/game-result">Paper</Link>
+                <Link to="/game-result">Scissors</Link>
             </div>
         );
     }

@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import { Link } from 'react-router-dom';
 
 class Homepage extends PureComponent {
 
@@ -6,8 +7,8 @@ class Homepage extends PureComponent {
 
 		return (
 			<div>
-				<button>Human vs Computer</button>
-				<button>Computer vs Computer</button>
+				<Link to="/rock-paper-scissors-choice">Human vs Computer</Link>
+				<Link to="/game-result">Computer vs Computer</Link>
 			</div>
 		);
 	}
