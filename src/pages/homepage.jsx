@@ -5,7 +5,10 @@ class Homepage extends PureComponent {
 	render() {
 
 		return (
-			<div>React Hello World</div>
+			<div>
+				<button>Human vs Computer</button>
+				<button>Computer vs Computer</button>
+			</div>
 		);
 	}
 }

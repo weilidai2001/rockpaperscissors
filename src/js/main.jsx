@@ -2,11 +2,11 @@ require('../css/main.scss');
 
 import React, {PropTypes, Component} from 'react';
 import {render} from 'react-dom';
-
-import Homepage from '../pages/homepage';
-
+import routes from './routes';
 
 render(
-	<div>React Hello World</div>,
+	<div>
+		{routes}
+	</div>,
 	document.getElementById('root')
 );
