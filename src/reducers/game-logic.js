@@ -1,11 +1,13 @@
+import { GameChoice } from '../constants/game-choices';
+
 export default function GameLogic(state = {}, action) {
     switch (action.type) {
-        case 'CHOICE_ROCK':
-            return { choice: 'CHOICE_ROCK' };
-        case 'CHOICE_PAPER':
-            return { choice: 'CHOICE_PAPER' };
-        case 'CHOICE_SCISSORS':
-            return { choice: 'CHOICE_SCISSORS' };
+        case GameChoice.CHOICE_ROCK.slug:
+            return { choice: GameChoice.CHOICE_ROCK .slug};
+        case GameChoice.CHOICE_PAPER.slug:
+            return { choice: GameChoice.CHOICE_PAPER .slug};
+        case GameChoice.CHOICE_SCISSORS.slug:
+            return { choice: GameChoice.CHOICE_SCISSORS .slug};
 
         default:
             return state;

@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
+import { GameChoice } from '../constants/game-choices';
 
 class RockPaperScissorsChoice extends PureComponent {
     constructor(props, context) {
@@ -16,9 +17,9 @@ class RockPaperScissorsChoice extends PureComponent {
 
         return (
             <div>
-                <button onClick={() => this.makeChoice('CHOICE_ROCK')}>Rock</button>
-                <button onClick={() => this.makeChoice('CHOICE_PAPER')}>Paper</button>
-                <button onClick={() => this.makeChoice('CHOICE_SCISSORS')}>Scissors</button>
+                <button onClick={() => this.makeChoice(GameChoice.CHOICE_ROCK.slug)}>{GameChoice.CHOICE_ROCK.displayAs}</button>
+                <button onClick={() => this.makeChoice(GameChoice.CHOICE_PAPER.slug)}>{GameChoice.CHOICE_PAPER.displayAs}</button>
+                <button onClick={() => this.makeChoice(GameChoice.CHOICE_SCISSORS.slug)}>{GameChoice.CHOICE_SCISSORS.displayAs}</button>
             </div>
         );
     }
