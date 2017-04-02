@@ -16,10 +16,10 @@ module.exports = {
 		modules: [
 			path.resolve('./node_modules')
 		],
-		extensions: ['.js']
+		extensions: ['.js', '.jsx']
 	},
 	entry: {
-		'main': './src/js/main.js'
+		'main': './src/js/main.jsx'
 	},
 	output: {
 		path: path.join(process.cwd(), 'build'),
@@ -61,7 +61,7 @@ module.exports = {
 				use: ['css-loader', 'sass-loader']
 			})
 		},{
-			test: /\.js$/,
+			test: /\.jsx$/,
 			exclude: [/node_modules/],
 			use: 'babel-loader'
 		}]

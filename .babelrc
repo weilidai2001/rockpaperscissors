@@ -5,6 +5,7 @@
         "modules": false
       }
     }],
-    "stage-3"
+	"react",
+	"stage-3"
   ]
 }
