@@ -13,12 +13,6 @@ export function calculateWinner(player1Choice, player2Choice) {
 }
 
 export function getRandomChoice(){
-    const randomNumberBetweenZeroAndOne = Math.random();
-    if (randomNumberBetweenZeroAndOne <= 0.3333){
-        return GameChoice.CHOICE_ROCK;
-    } else if (randomNumberBetweenZeroAndOne > 0.3333 && randomNumberBetweenZeroAndOne <= 0.6666) {
-        return GameChoice.CHOICE_PAPER;
-    } else {
-        return GameChoice.CHOICE_SCISSORS;
-    }
+	const choices = Object.values(GameChoice);
+	return choices[Math.floor(Math.random() * choices.length)];
 }
