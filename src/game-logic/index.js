@@ -1,32 +1,15 @@
+import { GameRules } from '../constants/game-rules';
 import { GameChoice } from '../constants/game-choices';
 import { WinningStates } from '../constants/winning-states';
 
 export function calculateWinner(player1Choice, player2Choice) {
-    if (player1Choice === GameChoice.CHOICE_ROCK) {
-        if (player2Choice === GameChoice.CHOICE_PAPER) {
-            return WinningStates.PLAYER2;
-        } else if (player2Choice === GameChoice.CHOICE_ROCK) {
-            return WinningStates.DRAW;
-        } else {
-            return WinningStates.PLAYER1;
-        }
-    } else if (player1Choice === GameChoice.CHOICE_PAPER){
-        if (player2Choice === GameChoice.CHOICE_SCISSORS) {
-            return WinningStates.PLAYER2;
-        } else if (player2Choice === GameChoice.CHOICE_PAPER) {
-            return WinningStates.DRAW;
-        } else {
-            return WinningStates.PLAYER1;
-        }
-    } else if (player1Choice === GameChoice.CHOICE_SCISSORS){
-        if (player2Choice === GameChoice.CHOICE_ROCK) {
-            return WinningStates.PLAYER2;
-        } else if (player2Choice === GameChoice.CHOICE_SCISSORS) {
-            return WinningStates.DRAW;
-        } else {
-            return WinningStates.PLAYER1;
-        }
-    }
+	if (GameRules[player1Choice].wins.includes(player2Choice)) {
+		return WinningStates.PLAYER1;
+	} else if (GameRules[player1Choice].loses.includes(player2Choice)) {
+		return WinningStates.PLAYER2;
+	} else {
+		return WinningStates.DRAW;
+	}
 }
 
 export function getRandomChoice(){
